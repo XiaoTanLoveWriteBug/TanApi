@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+    <test name="UITest">
+        <packages>
+            <package name="testcase.*" />
+        </packages>
+<!--     排除执行指定-->
+        <classes>
+            <class name="testcase.TestNgDemo">
+                <methods>
+                    <exclude name="test03"></exclude>
+                    <include name=""></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

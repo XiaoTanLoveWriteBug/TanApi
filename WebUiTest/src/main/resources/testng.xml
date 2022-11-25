@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="TestAll">
-
-    <test name="UITest">
+<!--按照类并发执行-->
+    <test name="UITest" parallel="classes" thread-count="4">
         <packages>
             <package name="testcase.*" />
         </packages>
@@ -14,6 +14,8 @@
                     <include name=""></include>
                 </methods>
             </class>
+            <class name="testcase.TestGird"></class>
+            <class name="testcase.Test1"></class>
         </classes>
     </test>
 
